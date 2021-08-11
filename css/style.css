@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap);
+
+/* * {outline: 1px solid red;} */
+
+:root {
+    --color-font: hsla(0, 0%, 100%, 0.75);
+    --color-bg: hsl(0, 0%, 95%);
+    --color-card-sedans: hsl(31, 77%, 52%);
+    --color-card-suvs:hsl(184, 100%, 22%);
+    --color-card-luxury: hsl(179, 100%, 13%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* clearfix */
+/*===================================================*/
+.card:before,
+.card:after {
+    content: " ";
+    display: table;
+}
+.card:after {
+    clear: both;
+}
+.card {
+    *zoom: 1;
+}
+/*=====================================================*/
+
+html,
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--color-font);
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-bg);
+}
+
+header {
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+article {
+    height: 9em;
+}
+
+footer {
+    margin-top: 3.5em;
+    display: flex;
+}
+
+h1 {
+    color: var(--color-bg);
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+p {
+    color: var(--color-font);
+    margin-bottom: 2em;
+    line-height: 1.4em;
+}
+
+a {
+    display: block;
+    padding: .8em 1.5em;
+
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 750px;
+    height: auto;
+}
+
+.card {
+    width: 250px;
+    height: 425px;
+
+    padding: 1em 2em;
+}
+
+.float-left {
+    float: left;
+}
+
+.orange {
+    background-color: var(--color-card-sedans);
+    border-radius: .5em 0 0 .5em;
+}
+
+.cyan {
+    background-color: var(--color-card-suvs);
+}
+
+.cyan-dark {
+    background-color: var(--color-card-luxury);
+    border-radius: 0 .5em .5em 0;
+}
+
+.button {
+    background: var(--color-bg);
+    border-radius: 2em;
+}
+
+.btn-orange {
+    color: var(--color-card-sedans);
+}
+
+.btn-cyan {
+    color: var(--color-card-suvs);
+}
+
+.btn-cyan-dark {
+    color: var(--color-card-luxury);
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    border: .1em solid var(--color-bg);
+}
+
+.orange .button:hover,
+.orange .button:focus,
+.orange .button:active {
+    background-color: var(--color-card-sedans);
+}
+
+.cyan .button:hover,
+.cyan .button:focus,
+.cyan .button:active {
+    background-color: var(--color-card-suvs);
+}
+
+.cyan-dark .button:hover,
+.cyan-dark .button:focus,
+.cyan-dark .button:active {
+    background-color: var(--color-card-luxury);
+}
+
+.button a:hover,
+.button a:focus,
+.button a:active {
+    color: var(--color-bg);
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        height: auto;
+    }
+    
+    .wrapper {
+        width: 250px;
+        height: auto;
+    }    
+
+    .float-left {
+        float: none;
+    } 
+    
+    .orange {
+        border-radius: .5em .5em 0 0;
+    }
+
+    .cyan-dark {
+        border-radius: 0 0 .5em .5em;
+    }
+
+}
+
+
